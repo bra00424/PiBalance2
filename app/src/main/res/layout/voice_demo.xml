@@ -1,41 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#FFFFFF"
+    android:background="#009988"
     android:orientation="vertical" >
 
     <TextView
         android:layout_width="342dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
         android:text="Raspberry Pi Balance"
         android:textSize="50dp"
         android:gravity="center_horizontal"
-        android:id="@+id/piBalanceText" />
+        android:id="@+id/piBalanceText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/idBalanceInput"
+        android:layout_alignEnd="@+id/idBalanceInput"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/speakButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/voic_img" />
+        android:background="@drawable/voic_img"
+        android:layout_below="@+id/piBalanceText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp" />
 
-    <TextView id="@+id/idBalanceWeight"
+    <TextView android:id="@+id/idBalanceWeight"
         android:text="Balance Weight"
         android:layout_width="317dp"
         android:layout_height="wrap_content"
         android:textSize="40dp"
-        />
+        android:layout_marginTop="98dp"
+        android:layout_below="@+id/speakButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="20dp" />
 
     <EditText
         android:id="@+id/idBalanceInput"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:text="Balance Input"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:drawableTop="@android:color/black"
         android:drawableBottom="@android:color/black"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:background="#ff6041ff"
+        android:layout_above="@+id/textViewSampleID"
+        android:layout_toRightOf="@+id/idBalanceWeight"
+        android:layout_toEndOf="@+id/idBalanceWeight" />
+
+    <TextView
+        android:id="@+id/textViewSampleID"
+        android:text="Sample ID"
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/idBalanceWeight"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="20dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:text="Sample ID Input"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:drawableTop="@android:color/black"
+        android:drawableBottom="@android:color/black"
+        android:inputType="numberDecimal"
+        android:layout_alignTop="@+id/textViewSampleID"
+        android:layout_toRightOf="@+id/textViewSampleID"
+        android:layout_toEndOf="@+id/textViewSampleID"
+        android:background="#ff6041ff" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:text="Upload"
+        android:id="@+id/buttonUpload"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp"
+        android:textSize="40sp"
+        android:background="@android:color/holo_blue_dark" />
 
 
-
-</LinearLayout>
+</RelativeLayout>
