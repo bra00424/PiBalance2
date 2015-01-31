@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Raspberry Pi Balance"
+        android:textSize="50dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/piBalanceText" />
+
+    <Button
+        android:id="@+id/speakButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/voic_img" />
+
+    <TextView id="@+id/idBalanceWeight"
+        android:text="Balance Weight"
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        />
+
+    <EditText
+        android:id="@+id/idBalanceInput"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@android:color/black"
+        android:drawableBottom="@android:color/black"
+        android:inputType="numberDecimal" />
+
+
+
+</LinearLayout>
